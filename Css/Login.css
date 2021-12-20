@@ -1,0 +1,33 @@
+
+/* body {
+  background: #8bbdf3;
+  background: linear-gradient(to right, #95c1fa, #33AEFF);
+} */
+
+.card-img-left {
+  width: 45%;
+  /* Link to your background image using in the property below! */
+  background: scroll center url('https://ditstekdemo.com/ee/assets/images/login.png');
+  background-size: cover;
+  height:450px;
+  width:300px;
+}
+
+.btn-login {
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+  padding: 0.50rem 1rem;
+  height: 40px;
+  width: 80px;
+ 
+}
+
+.btn-google {
+  color: white !important;
+  background-color: #ea4335;
+}
+
+.btn-facebook {
+  color: white !important;
+  background-color: #3b5998;
+}
