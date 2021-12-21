@@ -97,6 +97,7 @@ $(document).ready(function () {
       isActive: true,
       actionPerformedBy: "Rajput@gmail.com"
     }
+    
     $.ajax({
       type: 'POST',
       url: 'https://localhost:5001/api/Employees/AddEmployees',

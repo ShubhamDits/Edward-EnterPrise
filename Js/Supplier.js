@@ -100,6 +100,7 @@ $(document).ready(function () {
                   isActive: true,
                   actionPerformedBy: "Rajput" 
                  }
+                 
           $.ajax({
               type: 'POST',
               url: 'https://localhost:5001/api/Supplier/AddSupplier',
