@@ -138,53 +138,59 @@ $(document).ready(function () {
     })
   })
 
-//-----------------Delete Data in js------------------
+//-----------------Delete Data in jquery------------------
 function DeletePricing(id) {
-  window.location.reload();
-  debugger
-  fetch(`https://localhost:5001/api/Pricing/DeletePricing`, {
-    method: "DELETE",
-    body: JSON.stringify({
-      "pricing_Id": id
-    }),
-    headers: { "Content-type": "application/json; charset=UTF-8" }
-  }).then(res => {
-    return res.json();
-  }).then(data => {
-    console.log(data)
-  })
-  alert("Delete successfully!!!")
-}
-
-
-//---------------------Update Data in Apiin js----------------
-function updateFunction(id) {
-  debugger
-  window.location.reload();
-  var upZoneName = document.getElementById(`zone${id}`).value;
-  var upTechnicianName = document.getElementById(`tec${id}`).value;
-  var upFirst_Hour = document.getElementById(`firsthour${id}`).value;
-  var upAdditional_Hour = document.getElementById(`addhour${id}`).value;
-  // var upIsActive = document.getElementById(`isactive${id}`).value;
-  fetch("https://localhost:5001/api/Pricing/UpdatePricing", {
-    method: "PUT",
-    body: JSON.stringify({
-      pricing_Id: id,
-      zip_Code_Id: upZoneName,
-      emp_Id: upTechnicianName,
-      first_Hour: upFirst_Hour,
-      additional_Hour: upAdditional_Hour,
-      isActive: true,
-      actionPerformedBy: "rajput@gmail.com",
-    }),
-
-    headers: {
-      "Content-type": "application/json; charset=UTF-8",
-    },
-  })
-    .then(function (data) {
-      return data.json();
+  $(document).ready(function(){
+    debugger
+    window.location.reload();
+    var Pricing={
+      pricing_Id:id,
+      isActive: false,
+      actionPerformedBy: "Rajput@gmail.com"
+    }
+    $.ajax({
+      type:'Delete',
+      url:'https://localhost:5001/api/Pricing/DeletePricing',
+      data:JSON.stringify(Pricing),
+      contentType:'application/json; charset=utf-8',
+      dataType:'json',
+      success: function(data){
+        alert('data is '+data);
+      },
+      error:function(){
+        alert("INSIDE FAILURE");
+      }
     })
-  alert("update successfully!!!")
+  })
 }
 
+//---------------------Update Data in Apiin jquery----------------
+function updateFunction(id) {
+  $(document).ready(function () {
+      debugger
+      window.location.reload();
+      var pricing = {
+        pricing_Id:id,
+        zip_Code_Id: $(`#zone${id}`).val(),
+        emp_Id: $(`#tec${id}`).val(),
+        first_Hour: $(`#firsthour${id}`).val(),
+        additional_Hour: $(`#addhour${id}`).val(),
+        isActive: true,
+        actionPerformedBy: "Rajput@gmail.com"
+      }
+      $.ajax({
+        type: 'PUT',
+        url: 'https://localhost:5001/api/Pricing/UpdatePricing',
+        data: JSON.stringify(pricing),
+        contentType: 'application/json; charset=utf-8',
+        dataType: 'json',
+        success: function (data) {
+          alert('data is ' + data);
+        },
+        error: function () {
+          alert("INSIDE FAILURE");
+        }
+      });
+    });
+  }
+  
