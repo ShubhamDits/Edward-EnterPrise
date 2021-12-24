@@ -20,6 +20,7 @@ $(document).ready(function () {
           ConfirmPassword:$("#inputPasswordNewVerify").val(),
           isActive: true  
         }
+        
         $.ajax({
           type: 'PUT',
           url: 'https://localhost:5001/api/Login/ChangePassword',
