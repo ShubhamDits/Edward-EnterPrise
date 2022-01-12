@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">   
+    <link rel="stylesheet" href="./Css/css/css.css">  
+<link rel="stylesheet" href="./Css/css/content.css"> 
+<link rel="stylesheet" href="./Css/font-awesome-4.7.0/css/font-awesome.css">
+<style>
+
+ .page-link {
+  
+   position: relative;
+  
+   display: block;
+  
+   padding: 0.5rem 0.75rem;
+  
+   margin-left: -1px;
+  
+   line-height: 1.25;
+  
+   color: #003C00;
+  
+ }
+  
+ .page-item.disabled .page-link {
+  
+   color: #868e96;
+  
+   pointer-events: none;
+  
+   cursor: auto;
+  
+   background-color: #CEFFCE;
+  
+   border-color: #718393;
+  
+ }
+  
+ .page-item.active .page-link {
+  
+   z-index: 1;
+  
+   color: #fff;
+  
+   background-color: #003C00;
+  
+   border-color: #AEFF5E;
+  
+ }
+  
+ .page-link:focus, .page-link:hover {
+  
+   color: #fff;
+  
+   text-decoration: none;
+  
+   background-color: #7386D5;
+  
+   border-color: #AEFF5E;
+  
+ }
+  
+ </style>
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <div style="height:120px;width:200px;background-image: url(https://ditstekdemo.com/ee/assets/images/logo.svg);background-repeat: no-repeat;
+                background-size: 100%;"></div>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li>            
+                    <a  href="ResidentialCustomer.html"><i class="fa fa-home" aria-hidden="true"></i>&nbsp; Customer Onboarding</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-university" aria-hidden="true"></i>&nbsp; Calender</a>
+                </li>
+                <li>
+                    <a href="customerJobFolder.html"><i class="fa fa-users" aria-hidden="true"></i>&nbsp; Job Folder</a>
+                </li>  
+                <li>
+                    <a href="EmployeeJobVisitModule.html"><i class="fa fa-modx" aria-hidden="true"></i>&nbsp; Job Visit
+                        Module</a>
+                </li>
+        </nav>
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #7386D5;">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item" style="margin-top: 13px;">
+                                <input type="text" placeholder="Search.." name="search">
+                            <!-- <button type="submit"><i class="fa fa-search"></i></button> -->
+                       
+                              </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Login.html" style="color: #ffff;"><h3>Logout</h3></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav> 
+                    
+<div >
+<nav aria-label="Demo of Bootstrap 4 Navigation">
+    <i class="fa fa-user-o" style="font-size:24px;margin-left:75px;">
+        <br><lable>Customer</lable></i>
+  <ul class="pagination">
+    <!-- <li class="page-item"><a class="page-link" href="Customer.html">1</a></li> -->
+    &nbsp;
+    <i class="fa fa-briefcase" style="font-size:24px;margin-left:590px;margin-top:-50px;" >
+        <br><lable>Service Request</lable></i>
+  <ul class="pagination">
+    <!-- <li class="page-item" style="margin-left: -150px;"><a class="page-link" href="FServiceRequest.html">2</a></li> -->
+    &nbsp;
+    <i class="fa fa-window-maximize" style="font-size:24px;margin-left:390px;margin-top:-50px;" >
+        <br><lable>Assign Technician</lable></i>
+  <ul class="pagination">
+    <!-- <li class="page-item" style="margin-left: -150px;"><a class="page-link" href="AssignTechnician.html">3</a></li> -->
+</ul>
+ 
+</nav>
+    <div class="modal-body">
+        <h3>Type of Customer</h3>
+        <div class="form-check-inline">
+            <label class="radio-inline">
+              <input type="radio" name="optradio" > Facilities
+            &nbsp;&nbsp;
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="optradio" checked > Residential
+             &nbsp;&nbsp;
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="optradio" > Commercial
+            </label>
+           <br>
+        </div>  
+             <!-- <div class="form-group col-md-4">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1" >
+                <label class="form-check-label" for="exampleCheck1">Commercial</label>
+            </div>
+            &nbsp; -->
+        <form id="myForm">
+            <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="gender">Customer</label>
+                <select class="form-control" name="role" id="customer">
+                    <option value="0">--Select--</option>                                                       
+                </select>
+            </div> 
+                <div class="form-group col-md-4">
+                    <label for="inputEmail4">Zip Code</label>
+                    <input type="text" class="form-control" id="fname" placeholder="zip" />
+                </div>
+                <div class="form-check" style="margin-top:-50px;margin-left:980px ;">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Do you still want to add customer ?</label>
+                  </div>
+                  </div>
+        </from>     
+        </div>
+        &nbsp;
+    <h4>Client Billing Info</h4>
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            <label for="inputEmail4">First Name</label>
+            <input type="text" class="form-control" id="fnam" placeholder="Enter the FirstName" />
+        </div>
+        <div class="form-group col-md-4">
+            <label for="inputEmail4">Last Name</label>
+            <input type="text" class="form-control" id="lname" placeholder="Enter the LastName" />
+        </div>
+        <div class="form-group col-md-4" >
+            <label for="inputEmail4">Email</label>
+            <input type="text" class="form-control" id="email" placeholder="Enter the Email" />
+        </div>
+        </div>
+        <div class="form-row">
+         <div class="form-group col-md-4">
+            <label for="inputEmail4">Phone</label>
+            <input type="text" class="form-control" id="phone" placeholder="Enter the Phone" />
+        </div> 
+        
+        <div class="form-group col-md-4">
+            <label for="inputEmail4">Address</label>
+            <input type="text" class="form-control" id="address" placeholder="Enter the Address" />
+        </div> 
+        <div class="form-group col-md-4">
+            <label for="inputEmail4">State</label>
+            <input type="text" class="form-control" id="state" placeholder="Enter the State" />
+        </div>
+        </div>
+        <div class="form-row">
+        <div class="form-group col-md-4">
+            <label for="inputEmail4">City</label>
+            <input type="text" class="form-control" id="city" placeholder="Enter the City" />
+        </div>
+        <div class="form-group col-md-4">
+            <label for="inputEmail4">Zip Code</label>
+            <input type="text" class="form-control" id="zip" placeholder="Enter the Zipcode" />
+        </div>
+        <div class="form-group col-md-4" style="margin-top:-50px;margin-left:1000px;">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Update Existing Customer</label>
+        </div>
+        </div>
+        <button type="submit" class="btn btn-primary" id="btnsubmit">
+            Submit
+        </button>
+        &nbsp;
+        <!-- <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Update Existing Facilities Client</label>
+          </div> -->
+    </div>
+    
+    <div class="form-row">
+            <div class="form-group col-md-4">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1" style="margin-left: 20px;">
+                <label class="form-check-label" for="exampleCheck1" style="margin-left: 40px;">Job Site Address Same as Billing</label>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="inputEmail4">First Name</label>
+                <input type="text" class="form-control" id="fname1" placeholder="Enter the FirstName" />
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputEmail4">Last Name</label>
+                <input type="text" class="form-control" id="lname1" placeholder="Enter the LastName" />
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputEmail4">Email</label>
+                <input type="text" class="form-control" id="email1" placeholder="Enter the Email" />
+            </div>
+            </div>
+            <div class="form-row">
+             <div class="form-group col-md-4">
+                <label for="inputEmail4">Phone</label>
+                <input type="text" class="form-control" id="phone1" placeholder="Enter the Phone" />
+            </div> 
+            
+            <div class="form-group col-md-4">
+                <label for="inputEmail4">Address</label>
+                <input type="text" class="form-control" id="address1" placeholder="Enter the Address" />
+            </div> 
+            <div class="form-group col-md-4">
+                <label for="inputEmail4">State</label>
+                <input type="text" class="form-control" id="state1" placeholder="Enter the State" />
+            </div>
+            </div>
+            <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="inputEmail4">City</label>
+                <input type="text" class="form-control" id="city1" placeholder="Enter the City" />
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputEmail4">Zip Code</label>
+                <input type="text" class="form-control" id="zip1" placeholder="Enter the Zipcode" />
+            </div>
+            </div>
+    <a class="page-link"  type="submit" id="btnNext" href="ResidentialServiceRequest.html" style="height:35px;width:75px;background-color: #7386D5;color: white;">Next</a>
+</div>         
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+        <script src="./Js/user.js"></script>
+        <script src="./js/ResidentialCustomer.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="jquery-1.7.1.js" type="text/javascript"></script>
+</body>
+</html>

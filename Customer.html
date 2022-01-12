@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Css/css/css.css">
+    <link rel="stylesheet" href="./Css/css/content.css">
+    <link rel="stylesheet" href="./Css/font-awesome-4.7.0/css/font-awesome.css">
+    <style>
+        #modal-body-custom {
+            max-width: 50%;
+        }
+        
+        .fa-pencil:before {
+                 padding: 11px;
+                 content: "\f040";}
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <div style="height:120px;width:200px;background-image: url(https://ditstekdemo.com/ee/assets/images/logo.svg);background-repeat: no-repeat;
+                background-size: 100%;"></div>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="User.html"><i class="fa fa-home" aria-hidden="true"></i>&nbsp; Users</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-university" aria-hidden="true"></i>&nbsp; Technician List</a>
+                </li>
+                <li>
+                    <a href="JobFolder.html"><i class="fa fa-users" aria-hidden="true"></i>&nbsp; Job Folder</a>
+                </li>
+                <li>
+                    <a href="JobVisitModule.html"><i class="fa fa-modx" aria-hidden="true"></i>&nbsp; Job Visit Module</a>
+                </li>
+                <li>
+                    <a href="AssignedTemplates.html"><i class="fa fa-cube" aria-hidden="true"></i>&nbsp;Assigned Templates</a>
+                </li>
+                <li>
+                    <a href="Categories.html"><i class="fa fa-child" aria-hidden="true"></i>&nbsp; Manage Categories</a>
+                </li>
+                <li>
+                    <a href="SubCategories.html"><i class="fa fa-flag" aria-hidden="true"></i>&nbsp; Add Sub Categories</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-drivers-license-o" aria-hidden="true"></i>&nbsp;Job Agreement</a>
+                </li>
+                <li>
+                    <a href="Supplier.html"><i class="fa fa-motorcycle" aria-hidden="true"></i>&nbsp; Suppliers List</a>
+                </li>
+                <li>
+                    <a href="ZipcodeManagement.html"><i class="fa fa-qrcode" aria-hidden="true"></i>&nbsp; ZipCode Management</a>
+                </li>
+                <li>
+                    <a href="Pricing.html"><i class="fa fa-registered" aria-hidden="true"></i>&nbsp;Pricing</a>
+                </li>
+                <li>
+                    <a href="Customer.html"><i class="fa fa-registered" aria-hidden="true"></i>&nbsp;Customer</a>
+                </li>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #7386D5;">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item" style="margin-top: 13px;">
+                                <input type="text" placeholder="Search By Supplier Name/Categorie Name..." id="search" name="search" style="width:300px ;">
+                                <!-- <button type="submit"><i class="fa fa-search"></i></button> -->
+
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Login.html" style="color: #ffff;">
+                                    <h3>Logout</h3>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div>
+                <h3 style="margin-top:-20px;margin-left:30px;">Customer List</h3>
+
+                <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal"
+                    style="margin-top:-65px;margin-left:88%; background-color: #7386D5;">
+                    + Add Customer
+                </button>
+                <br>
+            </div>
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div id="modal-body-custom" class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                Add New Supplier
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="myForm">
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="inputEmail4">First Name</label>
+                                        <input type="text" class="form-control" id="fname" placeholder="First Name" />
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="inputEmail4">Last Name</label>
+                                        <input type="text" class="form-control" id="lname" placeholder="Last Name" />
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="inputPassword4">Phone</label>
+                                        <input type="text" class="form-control" id="phone"
+                                            placeholder="Enter Phone Number" />
+                                    </div> 
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-4">
+                                            <label for="inputAddress2">Street Address </label>
+                                            <input type="text" class="form-control" id="staddress"
+                                                placeholder="Enter Street Address " />
+                                        </div>
+                                        <div class="form-group col-md-4 ">
+                                            <label for="inputAddress2">State </label>
+                                            <input type="text" class="form-control" id="state"
+                                                placeholder="Enter State " />
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="inputAddress">City</label>
+                                            <input type="text" class="form-control" id="city"
+                                                placeholder="Enter City" />
+                                        </div>
+                                       </div>
+                                       <div class="form-row">
+                                        <div class="form-group col-md-3">
+                                            <label for="inputAddress2">ZipCode</label>
+                                            <input type="text" class="form-control" id="zip"
+                                                placeholder="Enter Zip Code" />
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <label for="inputAddress2">Company Name</label>
+                                            <input type="text" class="form-control" id="company"
+                                                placeholder="Enter Company Name" />
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <label for="inputAddress2">Company Address</label>
+                                            <input type="text" class="form-control" id="companyAddress"
+                                                placeholder="Enter Company Address" />
+                                        </div>
+                                        <div class="form-group col-md-3 ">
+                                            <label for="gender">Categorie</label>
+                                            <select class="form-control" name="role" id="categorie">
+                                                <option value="0">--Select--</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" id="btnsub" onclick="AddSupplier()">
+                                Submit
+                            </button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                Cancel
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+    
+        <!-- table -->
+        <table class="table" id="user-table" style="width:100%;">
+            <thead style="background-color: #7386D5; color: #ffffff;">
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Address</th> 
+                    <th scope="col">Active/Inactive</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody id="customer">
+            </tbody>
+        </table>
+    <br>
+    </div>
+    </div>
+   
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="./Js/user.js"></script>
+    <!-- <script src="./Js/Supplier.js"></script> -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>  
+    <script type="text/javascript"> 
+    </script>
+    <script src="./Js/Customer.js"></script>
+</body>
+
+</html>
